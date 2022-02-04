@@ -11,6 +11,8 @@ var (
 	BotPrefix string
 	UserID	string
 	ServerID	string
+	Start	int
+	End		int
 
 	config *configStruct
 )
@@ -20,6 +22,8 @@ type configStruct struct {
 	BotPrefix string `json:"BotPrefix"`
 	UserID	string	`json:"UserID"`
 	ServerID	string	`json:"ServerID"`
+	Start		int	`json:"Start"`
+	End			int	`json:"End"`
 }
 
 func ReadConfig() error {
@@ -45,6 +49,8 @@ func ReadConfig() error {
 	BotPrefix = config.BotPrefix
 	UserID = config.UserID
 	ServerID = config.ServerID
+	Start = config.Start
+	End = config.End
 
 	return nil
 

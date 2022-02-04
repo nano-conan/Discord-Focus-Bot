@@ -3,6 +3,7 @@ package main
 import (
 	"time"
 
+	"focus-bot/config"
 	"focus-bot/mod_actions"
 	"github.com/bwmarrin/discordgo"
 )
@@ -31,6 +32,6 @@ func banDuringSchool(bot *discordgo.Session) {
 
 func inSchool() bool {
 	rn := time.Now()
-	return rn.Hour() < 15 && rn.Hour() > 7;
+	return rn.Hour() > config.Start && rn.Hour() < config.End ;
 }
 
