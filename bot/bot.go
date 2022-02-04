@@ -10,19 +10,19 @@ import (
 var BotId string
 var goBot *discordgo.Session
 
-func Start() {
+func Start() (*discordgo.Session, error) {
 	goBot, err := discordgo.New("Bot " + config.Token)
 
 	if err != nil {
 		fmt.Println(err.Error())
-		return
+		return nil, err
 	}
 
 	u, err := goBot.User("@me")
 
 	if err != nil {
 		fmt.Println(err.Error())
-		return
+		return nil, err
 	}
 
 	BotId = u.ID
@@ -33,10 +33,12 @@ func Start() {
 
 	if err != nil {
 		fmt.Println(err.Error())
-		return
+		return nil, err
 	}
 
 	fmt.Println("Bot is running !")
+
+	return goBot, nil
 
 }
 

@@ -2,18 +2,23 @@ package main
 
 import (
 	"fmt"
+	"time"
+
+//	"focus-bot/mod_actions"
 )
 
-func main() {
+func test() {
 	fmt.Println("vim-go")
 
-	dur := ParseDuration("15h")
 
-	t := AfterFunc(dur, ban())
 
-	dur := ParseDuration("9h")
+	dur, err := time.ParseDuration("15h")
 
-	t := AfterFunc(dur, unban())
+//	t := time.AfterFunc(dur, mod_actions.BanUser())
+
+	dur, err = time.ParseDuration("9h")
+
+//	t = time.AfterFunc(dur, mod_actions.UnbanUser())
 
 	//	ban()
 
