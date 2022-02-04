@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"focus-bot/bot"
 	"focus-bot/config"
-
-	"focus-bot/mod_actions"
 )
 
 func main() {
@@ -21,6 +19,8 @@ func main() {
 	if err != nil{
 		return
 	}
+
+	banDuringSchool(goBot)
 
 	<-make(chan struct{})
 	return
