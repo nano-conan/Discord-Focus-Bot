@@ -1,3 +1,5 @@
 ## Discord Focus Bot
 
-I'm currently writting this bot to ban myself from certain discord servers durinh school hours.
+This bot is used to ban myself from a certain discord server during school hours.
+
+Create a config.json file with your TokenID, UserID of the person you want banned, and ServerID of the server you want to be banned from.
