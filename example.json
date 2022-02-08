@@ -1,0 +1,7 @@
+{
+
+    "Token" = "ENTER DISCORD BOT TOKEN HERE",
+    "BotPrefix" = "!",
+    "UserID" = "ENTER YOUR DISCORD USERID HERE",
+    "ServerID" = "ENTER THE SERVER YOU WISH TO BE BANNED FRMO HERE"
+}
